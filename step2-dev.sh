@@ -4,6 +4,7 @@
 sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt update
 sudo apt -y install python3.7
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.7 3
 
 # Docker
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
