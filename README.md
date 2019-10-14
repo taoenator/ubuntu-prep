@@ -13,5 +13,7 @@ The following steps must be done manually before running the set-up scripts:
 Depending on the OS version, use the appropriate branch.
 
 ## Run the scripts
+Note: Be prepared to hit [Enter] or enter password.  After installing zsh, you are automatically logged into the zsh shell; Type 'exit' to resume execution of the script.
+
 1. step1-shell.sh sets up essentials, and zsh shell and associated plug-ins
 2. step2-dev.sh sets up development environments
