@@ -3,6 +3,7 @@
 # basic necessities
 sudo apt -y install software-properties-common apt-transport-https curl wget
 sudo apt -y install git vim htop
+sudo update-alternatives --config editor
 
 # Terminator
 sudo add-apt-repository ppa:gnome-terminator
