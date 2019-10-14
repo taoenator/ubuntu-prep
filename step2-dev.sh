@@ -4,7 +4,8 @@
 sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt update
 sudo apt -y install python3.7
-sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.7 3
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python2.7 2
+sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.7 3
 sudo update-alternatives --config python
 sudo apt -y install python3-pip
 sudo apt -y install python3-git
