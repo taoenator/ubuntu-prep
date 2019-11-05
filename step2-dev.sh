@@ -3,12 +3,15 @@
 # Python 3.7
 sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt update
-sudo apt -y install python3.7
-sudo update-alternatives --install /usr/bin/python python /usr/bin/python2.7 2
-sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.7 3
-sudo update-alternatives --config python
+sudo apt -y install python3.7 python3.7-venv
 sudo apt -y install python3-pip
 sudo apt -y install python3-git
+
+# create virtual environment
+# to activate: source ~/p37/bin/activate
+# to deactivate: deactivate
+cd ~
+python3.7 -m venv p37
 
 # Docker
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
