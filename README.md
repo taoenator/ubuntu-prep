@@ -17,3 +17,9 @@ Note: Be prepared to hit [Enter] or enter password.  After installing zsh, you a
 
 1. step1-shell.sh sets up essentials, and zsh shell and associated plug-ins
 2. step2-dev.sh sets up development environments
+3. step3-nvidia.sh sets up Docker to use native Nvidia GPUs
+
+Run the following to verify the Docker-Nvidia setup.
+```
+docker run --gpus all nvidia/cuda:9.0-base nvidia-smi
+```
