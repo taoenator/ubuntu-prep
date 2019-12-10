@@ -21,8 +21,25 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 sudo apt -y install powerline fonts-powerline
 
 # ZSH Powerlevel9k theme
-sudo apt -y install zsh-theme-powerlevel9k
-echo "source /usr/share/powerlevel9k/powerlevel9k.zsh-theme" >> ~/.zshrc
+cd
+wget https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf
+wget https://github.com/powerline/powerline/raw/develop/font/10-powerline-symbols.conf
+mv PowerlineSymbols.otf ~/.fonts/
+mkdir -p .config/fontconfig/conf.d #if directory doesn't exists
+
+fc-cache -vf ~/.fonts/
+
+mv 10-powerline-symbols.conf ~/.config/fontconfig/conf.d/
+
+git clone git://github.com/sigurdga/gnome-terminal-colors-solarized.git ~/.solarized
+cd ~/.solarized
+./install.sh --scheme=dark --install-dircolors=true
+
+# after above installation, edit ~/.zshrc to set ZSH_THEME="agnoster" and add line: eval `dircolors ~/.dir_colors/dircolors`
+echo "edit ~/.zshrc and set the following:"
+echo "ZSH_THEME=\"agnoster\""
+echo "eval `dircolors ~/.dir_colors/dircolors`"
+vim ~/.zshrc
 
 # Syntax Highlighting
 sudo apt -y install zsh-syntax-highlighting
