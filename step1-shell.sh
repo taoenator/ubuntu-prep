@@ -6,7 +6,7 @@ sudo apt -y install git vim htop
 sudo update-alternatives --config editor
 
 # Terminator
-sudo add-apt-repository ppa:gnome-terminator
+sudo add-apt-repository universe
 sudo apt update
 sudo apt -y install terminator
 
