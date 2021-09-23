@@ -1,21 +1,18 @@
 #!/bin/bash
 
 # basic necessities
-sudo apt -y install software-properties-common apt-transport-https curl wget
-sudo apt -y install git vim htop
+#sudo apt -y install software-properties-common apt-transport-https
+sudo apt -y install git vim htop curl wget
 sudo update-alternatives --config editor
 
-# Terminator
+# ZSH & Terminator
 sudo add-apt-repository universe
 sudo apt update
-sudo apt -y install terminator
-
-# ZSH
-sudo apt -y install zsh
+sudo apt -y install zsh terminator
 
 # Oh My ZSH
 cd
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Powerline fonts
 sudo apt -y install powerline fonts-powerline

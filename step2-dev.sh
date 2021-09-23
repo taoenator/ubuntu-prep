@@ -1,23 +1,17 @@
 #!/bin/bash
 
-# Python 3.7
-sudo add-apt-repository ppa:deadsnakes/ppa
-sudo apt update
-sudo apt -y install python3.7 python3.7-venv
+# Python 3 is built into Ubuntu 21.04
 sudo apt -y install python3-pip
 sudo apt -y install python3-git
-
-# create virtual environment
-# to activate: source ~/p37/bin/activate
-# to deactivate: deactivate
-cd ~
-python3.7 -m venv p37
+sudo pip3 install pipenv
 
 # Docker
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-sudo apt update
-sudo apt -y install docker-ce
+sudo apt -y install docker.io
+sudo systemctl enable --now docker
+sudo systemctl status docker
+docker --version
+
+sudo groupadd docker
 sudo usermod -aG docker ${USER}
 
 echo "Docker setup completed.  You must log out and log back in for settings to take effect."
